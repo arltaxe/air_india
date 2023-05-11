@@ -17,6 +17,7 @@ view: flight_occupancy {
       GROUP BY
           1,
           2
+      order by 1,2
        ;;
   }
 
@@ -45,8 +46,8 @@ view: flight_occupancy {
     sql: ${TABLE}.domestic_departures_ ;;
   }
 
-  dimension: avg_flight_occupation {
-    type: number
+  measure: avg_flight_occupation {
+    type: average
     sql: ${TABLE}.avg_flight_occupation ;;
   }
 
