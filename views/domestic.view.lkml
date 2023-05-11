@@ -46,7 +46,6 @@ view: domestic {
   }
 
 
-
   measure: passenger_kms__performed__th_ {
     type: sum
     label: "passenger-km performed"
@@ -62,5 +61,11 @@ view: domestic {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: max_capacity{
+    type: number
+    sql: passengers_carried_ * _pax__load_factor___in___  ;;
+
   }
 }
